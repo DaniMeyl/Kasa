@@ -5,13 +5,14 @@ import data from "../data/data.json";
 const Acceuil = () => {
   return (
     <section className="gallery">
-      {data.map((obj, index) => (
+      {data.map((data, index) => (
         <Link
-          to={"/anonces/" + obj.id}
+          to={"/annonces/" + data.id}
           key={index}
-          style={{ backgroundImage: "url(" + obj.cover + ")" }}
+          style={{ backgroundImage: `url(${data.cover})` }}
+         /* style={{ backgroundImage: "url(" + obj.cover + ")" }}*/
         >
-          <h3>{obj.title}</h3>
+          <h3>{data.title}</h3>
         </Link>
       ))}
     </section>

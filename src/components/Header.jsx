@@ -7,30 +7,31 @@ const Header = () => {
   return (
     <header>
       <div className="logo-header">
-        <img src={logoHeader} alt="logo kasa" />
+        <img
+          src={logoHeader}
+          alt="logo kasa orange"
+        />
       </div>
-      
       <nav>
-          <ul>
-            <NavLink
-              to="/"
-              className={({ isActive }) => {
-                return isActive ? "link active" : "link";
-              }}
-            >
-              Accueil
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) => {
-                return isActive ? "link active" : "link";
-              }}
-            >
-              A Propos
-            </NavLink>
-          </ul>
-        </nav>
-      
+        <ul>
+          <NavLink
+            to="/"
+            className={({ isActive }) => {
+              return isActive ? "link active" : "link";
+            }}
+          >
+            Accueil
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => {
+              return isActive ? "link active" : "link";
+            }}
+          >
+            A Propos
+          </NavLink>
+        </ul>
+      </nav>
     </header>
   );
 };

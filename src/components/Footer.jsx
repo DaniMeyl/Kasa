@@ -5,7 +5,10 @@ import "../style/layout/_footer.scss";
 const Footer = () => {
   return (
     <footer>
-      <img src={logoFooter} alt="logo kasa footer" />
+      <img
+        src={logoFooter}
+        alt="logo kasa blanc"
+      />
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>
   );
