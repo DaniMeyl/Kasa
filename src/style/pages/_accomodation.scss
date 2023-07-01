@@ -1,0 +1,228 @@
+.accomodation-container {
+  padding-top: 25px;
+}
+.infos-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.accomodation-header-tags {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 65%;
+  h1 {
+    color: #ff6060;
+    font-size: 36px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+  }
+  h2 {
+    color: #ff6060;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+    margin-top: -20px;
+  }
+  .tags {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    margin-top: 7px;
+    max-width: 120%;
+    .accomodation-tag {
+      display: flex;
+      flex-direction: row;
+      padding-left: 0px;
+      align-items: center;
+      justify-content: center;
+      background-color: #ff6060;
+      border-radius: 5px;
+      font-size: 14px;
+      color: white;
+      height: 25px;
+      width: 190px;
+      margin-right: 10px;
+    }
+  }
+}
+.accomodation-user-stars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top:18px;
+  .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      color: #ff6060;
+      text-align: right;
+      font-size: 18px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%;
+      align-items: flex-end;
+      padding-right: 10px;
+    }
+    .name {
+      margin-bottom: -16px;
+    }
+
+    img {
+      background-size: "cover";
+      background-position: "center";
+      border-radius: 70px;
+      height: 64px;
+      width: 64px;
+    }
+  }
+
+  .empty-star-container {
+    .star {
+      margin-top: 20px;
+      margin-left: 10px;
+
+      height: 23px;
+      width: 23px;
+      margin-left: 10px;
+    }
+  }
+  .filled-star-container {
+    margin-top: -28px;
+    .filled-star {
+      height: 23px;
+      width: 23px;
+      margin-left: 10px;
+    }
+  }
+}
+.collapse-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  .collapse {
+    margin: 0;
+    width: 90%;
+  }
+  .description {
+    width: 90%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .equipment {
+    width: 90%;
+    margin: 0px;
+    padding: 0px;
+    margin-right: -5%;
+    list-style-type: none;
+  }
+}
+@media screen and (max-width: 1024px){
+  .tags {
+  
+    max-width: 150% !important;
+
+}
+}
+@media screen and (max-width: 765px) {
+  .infos-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    h1 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 14px;
+    }
+  }
+  .accomodation-stars {
+    margin-top: -25px;
+    margin-left: -10px;
+  }
+  .accomodation-user-stars {
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .accomodation-host {
+      text-align: right;
+      .name {
+        font-size: 12px;
+      }
+      .lastname {
+        font-size: 12px;
+        margin-top: 20px;
+      }
+    }
+    .empty-star-container {
+      margin-top: 10px;
+      .star {
+        width: 12px;
+        height: 12px;
+        margin-bottom: 8px;
+      }
+    }
+    .filled-star-container {
+      .filled-star {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  .accomodation-header-tags {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin-bottom: -5px;
+        .tags {
+      font-size: 10px;
+      width: 100%;
+      margin-bottom:25px;
+      flex-wrap: wrap;
+      .accomodation-tag {
+        width: 95px;
+        padding-left: 3px;
+        padding-right: 3px;
+        height: 18px;
+        font-size: 10px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .collapse-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+
+    .collapse {
+      width: 100%;
+      h3 {
+        font-size: 13px;
+      }
+    }
+    .description {
+      width: 100%;
+      margin-top: 15px;
+    }
+    .equipment {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+}

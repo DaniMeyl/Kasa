@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
-import Gallery from "../components/Gallery";
+import Cards from "../components/Cards";
 import bannerImage from "../assets/images/IMG.png";
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
         title="Chez vous, partout et ailleurs"
         image={bannerImage}
       />
-      <Gallery/>
+      <Cards/>
       
     </div>
   );

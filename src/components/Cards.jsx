@@ -2,15 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
 
-const Acceuil = () => {
+const Cards = () => {
   return (
     <section className="gallery">
       {data.map((data, index) => (
         <Link
-          to={"/annonces/" + data.id}
+          to={"/accomodation/" + data.id}
           key={index}
           style={{ backgroundImage: `url(${data.cover})` }}
-         /* style={{ backgroundImage: "url(" + obj.cover + ")" }}*/
         >
           <h3>{data.title}</h3>
         </Link>
@@ -19,4 +18,4 @@ const Acceuil = () => {
   );
 };
 
-export default Acceuil;
+export default Cards;
