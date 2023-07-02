@@ -9,28 +9,41 @@ const Rating = () => {
   const data = Data.find((item) => item.id === id);
 
   const numberStars = parseInt(data.rating);
-  const stars = [];
 
-  for (let i = 0; i < numberStars; i++) {
-    stars.push(
-      <img
-        src={starFull}
-        alt="note sur 5"
-        key={i}
-        className="star filled-star"
-      />
-    );
-  }
+  const renderStars = () => {
+    let activeStars = [];
+
+    for (let i = 0; i <= 4; i++) {
+      if (numberStars > i) {
+        activeStars.push(true);
+      } else {
+        activeStars.push(false);
+      }
+    }
+    return activeStars.map((image, i) => {
+      if (image) {
+        return (
+          <img
+            src={starFull}
+            alt="note sur 5"
+            key={i}
+            className="star filled-star"
+          />
+        );
+      } else {
+        return (
+          <img
+            src={starsEmpty}
+            alt="pas de note"
+            className="star empty-star"
+          />
+        );
+      }
+    });
+  };
   return (
     <div className="accomodation-stars">
-      <div className=" empty-star-container">
-        <img src={starsEmpty} alt="pas de note" className="star empty-star" />
-        <img src={starsEmpty} alt="pas de note" className="star empty-star" />
-        <img src={starsEmpty} alt="pas de note" className="star empty-star" />
-        <img src={starsEmpty} alt="pas de note" className="star empty-star" />
-        <img src={starsEmpty} alt="pas de note" className="star empty-star" />
-      </div>
-      <div className=" filled-star-container "> {stars}</div>
+      <div className="star-container">{renderStars()}</div>
     </div>
   );
 };

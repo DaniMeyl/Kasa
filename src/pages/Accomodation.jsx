@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Error from "./Error";
+import { Navigate } from "react-router-dom";
 import Slider from "../components/Slider";
 import Data from "../data/data.json";
 import Collapse from "../components/Collapse";
@@ -11,7 +11,7 @@ const Accomodation = () => {
   const data = Data.find((item) => item.id === id);
 
   if (!data) {
-    return <Error />;
+    return <Navigate to="/Error" />;
   }
 
   return (
@@ -48,7 +48,7 @@ const Accomodation = () => {
               </div>
               <img
                 src={data.host.picture}
-                alt={"photo de profil de " + data.host.name}
+                alt={`profil de ${data.host.name}`}
               />
             </div>
             <Rating />

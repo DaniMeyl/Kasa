@@ -86,7 +86,7 @@
     }
   }
 
-  .empty-star-container {
+  .star-container {
     .star {
       margin-top: 20px;
       margin-left: 10px;
@@ -96,14 +96,7 @@
       margin-left: 10px;
     }
   }
-  .filled-star-container {
-    margin-top: -28px;
-    .filled-star {
-      height: 23px;
-      width: 23px;
-      margin-left: 10px;
-    }
-  }
+  
 }
 .collapse-container {
   display: flex;
@@ -155,12 +148,16 @@
     margin-left: -10px;
   }
   .accomodation-user-stars {
-    margin-top: -10px;
+    margin-top: -18px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    .user img {
+      width: 32px;
+      height: 32px;
+    }
     .accomodation-host {
       text-align: right;
       .name {
@@ -168,21 +165,16 @@
       }
       .lastname {
         font-size: 12px;
-        margin-top: 20px;
+        margin-top: 18px;
       }
     }
-    .empty-star-container {
+    .star-container {
       margin-top: 10px;
       .star {
         width: 12px;
         height: 12px;
         margin-bottom: 8px;
-      }
-    }
-    .filled-star-container {
-      .filled-star {
-        width: 12px;
-        height: 12px;
+        margin-right: -5px;
       }
     }
   }
@@ -208,7 +200,7 @@
   .collapse-container {
     display: flex;
     flex-direction: column;
-    margin-top: -20px;
+    margin-top: -39px;
 
     .collapse {
       width: 100%;
