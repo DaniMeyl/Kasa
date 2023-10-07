@@ -21,13 +21,14 @@ const Rating = () => {
       }
     }
     return activeStars.map((image, i) => {
+      console.log(i)
       if (image) {
         return (
           <img
             src={starFull}
             alt="note sur 5"
             key={i}
-            className="star filled-star"
+            className="star"
           />
         );
       } else {
@@ -35,7 +36,8 @@ const Rating = () => {
           <img
             src={starsEmpty}
             alt="pas de note"
-            className="star empty-star"
+            key={i}
+            className="star"
           />
         );
       }

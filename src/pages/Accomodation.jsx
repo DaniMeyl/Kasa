@@ -9,7 +9,7 @@ import Rating from "../components/Rating";
 const Accomodation = () => {
   const { id } = useParams();
   const data = Data.find((item) => item.id === id);
-
+console.log(data)
   if (!data) {
     return <Navigate to="/Error" />;
   }
@@ -57,16 +57,16 @@ const Accomodation = () => {
 
         <div className="collapse-container">
           <div className="description">
-            {Data[0] && (
+            {data && (
               <Collapse label="Description">{data.description}</Collapse>
             )}
           </div>
 
           <div className="equipment">
-            {Data[0] && (
+            {data && (
               <Collapse label="Equipements">
                 {data.equipments.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index}>- {item}</li>
                 ))}
               </Collapse>
             )}
