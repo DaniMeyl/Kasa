@@ -9,7 +9,7 @@ import Rating from "../components/Rating";
 const Accomodation = () => {
   const { id } = useParams();
   const data = Data.find((item) => item.id === id);
-console.log(data)
+
   if (!data) {
     return <Navigate to="/Error" />;
   }

@@ -21,7 +21,7 @@ const Rating = () => {
       }
     }
     return activeStars.map((image, i) => {
-      console.log(i)
+     
       if (image) {
         return (
           <img
